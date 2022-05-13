@@ -40,4 +40,5 @@ screenshot
 build
 
 /.parcel-cache
+/.cache
 
