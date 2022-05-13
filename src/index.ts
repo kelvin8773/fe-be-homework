@@ -1,15 +1,6 @@
 import m from 'mithril';
-import './index.css';
-
-const App = {
-  view: function () {
-    return m('main', [
-      m('h1', { class: 'title' }, 'My first app'),
-      m('button', 'A button'),
-    ]);
-  },
-};
+import './static/css/index.css';
+import App from './App';
 
 const root = document.body;
-
 m.mount(root, App);

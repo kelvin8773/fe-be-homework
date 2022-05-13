@@ -18,7 +18,8 @@
   },
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build"
+    "build": "parcel build",
+    "test": "jest"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "dependencies": {
