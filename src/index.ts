@@ -1,3 +1,6 @@
+import m from 'mithril';
+import './index.css';
+
 const App = {
   view: function () {
     return m('main', [
