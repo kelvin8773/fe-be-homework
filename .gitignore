@@ -41,4 +41,9 @@ build
 
 /.parcel-cache
 /.cache
-
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/playwright/.cache/

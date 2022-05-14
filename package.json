@@ -19,8 +19,9 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "jest ./src",
+    "test:watch": "jest ./src --watch",
+    "e2e": "playwright test"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "dependencies": {
