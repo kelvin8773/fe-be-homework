@@ -9,7 +9,10 @@
   "main": "src/index.js",
   "source": "src/index.html",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.16.7",
     "@playwright/test": "^1.22.0",
+    "@types/jest": "^27.5.1",
+    "@types/mocha": "^9.1.1",
     "jest": "^28.1.0",
     "jsdom": "^19.0.0",
     "mithril-jest": "^1.0.3",
