@@ -6,7 +6,6 @@
   "repository": "git@github.com:kelvin8773/fe-be-homework.git",
   "author": "Kelvin Liang <kelvin9877@gmail.com>",
   "private": false,
-  "main": "src/index.js",
   "source": "src/index.html",
   "devDependencies": {
     "@babel/preset-typescript": "^7.16.7",
@@ -27,7 +26,9 @@
     "build": "parcel build",
     "test": "jest ./src",
     "test:watch": "jest ./src --watch",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "docker:build": "docker build -t web-client .",
+    "docker:run": "docker run --rm -it -p 1080:80 web-client"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "dependencies": {
