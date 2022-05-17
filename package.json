@@ -22,7 +22,7 @@
     "typescript": "^4.6.4"
   },
   "scripts": {
-    "start": "parcel src/index.html",
+    "start": "parcel src/index.html -p 3000",
     "build": "parcel build",
     "test": "jest ./src",
     "test:watch": "jest ./src --watch",
