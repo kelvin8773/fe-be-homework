@@ -1,0 +1,90 @@
+[
+  {
+    "id": "008",
+    "company": "Standard Chartered Bank",
+    "location": "Guangzhou, China",
+    "from": "2021-12-01",
+    "to": "",
+    "title": "Full Stack Developer",
+    "duties": [
+      {
+        "did": "d001",
+        "description": "Support Wealth Management products for global markets"
+      },
+      {
+        "did": "d002",
+        "description": "Agile development (Scrum team / Jira & Confluence)"
+      },
+      {
+        "did": "d003",
+        "description": "UI Development (Ember.js & React.js)"
+      }
+    ]
+  },
+  {
+    "id": "007",
+    "company": "HSBC",
+    "location": "Guangzhou, China",
+    "from": "2020-11-25",
+    "to": "2021-11-29",
+    "title": "Sr. Frontend Engineer & Scrum Master",
+    "duties": [
+      {
+        "did": "d001",
+        "description": "Work as scrum master for agile team daily development(Jira, Scrum methodology, 2-weeks Spring)"
+      },
+      {
+        "did": "d002",
+        "description": "Use React/Redux, in-house UI library to build up modern UI to help simplify customer-facing processes for banking"
+      },
+      {
+        "did": "d003",
+        "description": "Dealing with complex forms and validation rules, handling async API calls, and writing unit tests & end to end tests on a daily basis."
+      }
+    ]
+  },
+  {
+    "id": "006",
+    "company": "Microverse",
+    "location": "Remote",
+    "from": "2019-03-25",
+    "to": "2020-10-25",
+    "title": "Student & Full-Stack Development Mentor",
+    "duties": [
+      {
+        "did": "d001",
+        "description": "Built 20+ fully-functional real-world projects, including social media, online games, and personal portfolio sites."
+      },
+      {
+        "did": "d002",
+        "description": "Spent 12 months successfully pair-programming with developers worldwide with best practices, agile methodologies, and industry-standard git flows."
+      },
+      {
+        "did": "d003",
+        "description": "Mastered algorithms and data structures by completing 300+ hours of coding challenges."
+      },
+      {
+        "did": "d004",
+        "description": "Provided mentorship, assistance, and code reviews to junior developers."
+      }
+    ]
+  },
+  {
+    "id": "005",
+    "company": "WenLiao",
+    "location": "Shenzhen, China",
+    "from": "2017-08-01",
+    "to": "2018-03-15",
+    "title": "CTO",
+    "duties": [
+      {
+        "did": "d001",
+        "description": "Troubleshot and wrote code for the backend(Java/SQL), provide stable and optimized restful API service."
+      },
+      {
+        "did": "d002",
+        "description": "Wrote system scripts for seamlessly data migration (Table convert/field recalculate/DB transfor) to ensure app upgrade with zero downtime and less user interference."
+      }
+    ]
+  }
+]
