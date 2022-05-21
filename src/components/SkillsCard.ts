@@ -30,8 +30,6 @@ const SkillsCard = (props: Props) => {
         });
       });
 
-      console.log('Skills Cards', vnode.state.skills, skillsets);
-
       return m(
         'div',
         {
@@ -44,22 +42,25 @@ const SkillsCard = (props: Props) => {
             m('div', { class: 'px-8 py-8 sm:px-6' }, [
               m(
                 'div',
-                { class: 'text-2xl leading-6 font-medium text-gray-900' },
+                {
+                  class:
+                    'font-mono text-3xl leading-6 font-semibold text-gray-900',
+                },
                 key
               ),
               m(
                 'div',
-                { class: 'mt-1 max-w-2xl text-md text-gray-500' },
+                { class: 'my-2 italic max-w-2xl text-md text-gray-500' },
                 `Skills list of my ${key} Knowledge`
               ),
               value.map((skill) => {
                 const skillLevel = (skill.level / 5) * 100;
                 const skillColor =
                   skillLevel == 100
-                    ? 'bg-violet-600'
+                    ? 'bg-teal-600'
                     : skillLevel > 60
-                    ? 'bg-violet-400'
-                    : 'bg-violet-300';
+                    ? 'bg-teal-400'
+                    : 'bg-teal-200';
                 const progessBarClass = 'h-5 rounded-full ' + skillColor;
                 return m('div', { class: 'border-t border-gray-200' }, [
                   m('dl', [
@@ -72,7 +73,7 @@ const SkillsCard = (props: Props) => {
                       [
                         m(
                           'dt',
-                          { class: 'text-md font-medium text-gray-500' },
+                          { class: 'text-xl font-semibold text-gray-500' },
                           skill.context
                         ),
                         m(
@@ -91,9 +92,7 @@ const SkillsCard = (props: Props) => {
                               [
                                 m('div', {
                                   class: progessBarClass,
-                                  style: `width: ${
-                                    (skill.level / 5) * 100 + '%'
-                                  }`,
+                                  style: `width: ${skillLevel + '%'}`,
                                 }),
                               ]
                             ),

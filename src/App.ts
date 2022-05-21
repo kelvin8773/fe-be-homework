@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Loading from './components/Loading';
 import Navigator from './components/Navigator';
 import SkillsCard from './components/SkillsCard';
+import ExperiencesCard from './components/ExperiencesCard';
 
 const App = {
   oninit: async (vnode) => {
@@ -14,11 +15,16 @@ const App = {
       await fetch('http://localhost:9000/api/skills')
     ).json();
     vnode.state.loaded = 'true';
-    vnode.state.selected = 'skill';
+    vnode.state.selected = 'skills';
     m.redraw();
   },
   view: (vnode) => {
-    const { loaded, selected, skills, experiences } = vnode.state;
+    const { loaded, skills, experiences } = vnode.state;
+    let { selected } = vnode.state;
+    const setSelected = (select) => {
+      vnode.state.selected = select;
+      m.redraw();
+    };
 
     return m('div', { class: 'container mx-auto text-base py-4' }, [
       m(
@@ -26,9 +32,13 @@ const App = {
           name: 'Kelvin Liang',
         })
       ),
-      m(Navigator({ selected })),
-      vnode.state.experiences
-        ? m(SkillsCard({ skills: vnode.state.skills }))
+      m(Navigator({ selected, setSelected })),
+      loaded
+        ? selected == 'skills'
+          ? m(SkillsCard({ skills }))
+          : selected == 'experiences'
+          ? m(ExperiencesCard({ experiences }))
+          : 'Contact Info'
         : m(Loading),
     ]);
   },

@@ -38,6 +38,7 @@
   "dependencies": {
     "@types/mithril": "^2.0.10",
     "heroicons": "^1.0.6",
+    "luxon": "^2.4.0",
     "mithril": "^2.0.4"
   },
   "resolutions": {
