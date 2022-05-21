@@ -25,7 +25,7 @@
     "typescript": "^4.6.4"
   },
   "scripts": {
-    "start": "parcel src/index.html -p 3000",
+    "start": "parcel src/index.html -p 3000 --no-cache",
     "build": "parcel build",
     "test": "jest ./src",
     "test:watch": "jest ./src --watch",
@@ -37,8 +37,8 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "dependencies": {
     "@types/mithril": "^2.0.10",
-    "mithril": "^2.0.4",
-    "tw-elements": "^1.0.0-alpha12"
+    "heroicons": "^1.0.6",
+    "mithril": "^2.0.4"
   },
   "resolutions": {
     "jest-environment-jsdom": "28.1.0"

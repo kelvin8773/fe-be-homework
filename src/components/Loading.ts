@@ -10,15 +10,7 @@ const Loading = () => {
         },
         [
           m('div', { class: 'flex justify-center items-center' }, [
-            m(
-              'div',
-              {
-                class:
-                  'spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full',
-                role: 'status',
-              },
-              [m('span', { class: 'visuall-hidden' }, 'Data is Loading ...')]
-            ),
+            [m('span', { class: 'visuall-hidden' }, 'Data is Loading ...')],
           ]),
         ]
       );
