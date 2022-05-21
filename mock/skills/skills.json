@@ -1,0 +1,62 @@
+[
+  {
+    "id": "001",
+    "category": "Frontend",
+    "context": "React.js",
+    "level": "5"
+  },
+  {
+    "id": "002",
+    "category": "Frontend",
+    "context": "Redux.js",
+    "level": "4"
+  },
+  {
+    "id": "003",
+    "category": "Frontend",
+    "context": "Formik.js",
+    "level": "3"
+  },
+  {
+    "id": "004",
+    "category": "Frontend",
+    "context": "Jest",
+    "level": "3"
+  },
+  {
+    "id": "005",
+    "category": "Frontend",
+    "context": "Testing Library",
+    "level": "4"
+  },
+  {
+    "id": "006",
+    "category": "Backend",
+    "context": "Ruby on Rails",
+    "level": "3"
+  },
+  {
+    "id": "007",
+    "category": "Backend",
+    "context": "Node.js",
+    "level": "2"
+  },
+  {
+    "id": "008",
+    "category": "Backend",
+    "context": "MySQL",
+    "level": "4"
+  },
+  {
+    "id": "009",
+    "category": "Project Management",
+    "context": "Scrum Master",
+    "level": "3"
+  },
+  {
+    "id": "010",
+    "category": "Project Management",
+    "context": "Agile Development",
+    "level": "3"
+  }
+]
