@@ -1,27 +1,29 @@
 import m from 'mithril';
-// import 'tw-elements';
 import Header from './components/Header';
 import Loading from './components/Loading';
 import Navigator from './components/Navigator';
 import SkillsCard from './components/SkillsCard';
 import ExperiencesCard from './components/ExperiencesCard';
 
+const loadSelected = async (select: string, node: Object) => {
+  node[select] = await (
+    await fetch(`http://localhost:9000/api/${select}`)
+  ).json();
+};
+
 const App = {
   oninit: async (vnode) => {
-    vnode.state.experiences = await (
-      await fetch('http://localhost:9000/api/experiences')
-    ).json();
-    vnode.state.skills = await (
-      await fetch('http://localhost:9000/api/skills')
-    ).json();
-    vnode.state.loaded = 'true';
     vnode.state.selected = 'skills';
+    await loadSelected(vnode.state.selected, vnode.state);
+    vnode.state.loaded = 'true';
     m.redraw();
   },
+
   view: (vnode) => {
     const { loaded, skills, experiences } = vnode.state;
     let { selected } = vnode.state;
-    const setSelected = (select) => {
+    const setSelected = async (select) => {
+      await loadSelected(select, vnode.state);
       vnode.state.selected = select;
       m.redraw();
     };
