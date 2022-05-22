@@ -98,8 +98,8 @@ const config = {
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'yarn start -p 3000',
-    port: 3000,
+    command: 'yarn start -p 4000',
+    port: 4000,
   },
 };
 
