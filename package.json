@@ -1,0 +1,48 @@
+{
+  "name": "fe-be-homework",
+  "version": "1.0.0",
+  "description": "frontend setup skeleton project",
+  "license": "MIT",
+  "repository": "git@github.com:kelvin8773/fe-be-homework.git",
+  "author": "Kelvin Liang <kelvin9877@gmail.com>",
+  "private": false,
+  "source": "src/index.html",
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.16.7",
+    "@playwright/test": "^1.22.0",
+    "@types/jest": "^27.5.1",
+    "@types/mocha": "^9.1.1",
+    "connect-api-mocker": "^1.10.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "jest": "^28.1.0",
+    "jsdom": "^19.0.0",
+    "mithril-jest": "^1.0.3",
+    "parcel": "^2.5.0",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24",
+    "ts-jest": "^28.0.2",
+    "typescript": "^4.6.4"
+  },
+  "scripts": {
+    "start": "parcel src/index.html -p 3000 --no-cache",
+    "build": "parcel build",
+    "test": "jest ./src",
+    "test:watch": "jest ./src --watch",
+    "e2e": "playwright test",
+    "docker:build": "docker build -t web-client .",
+    "docker:run": "docker run --rm -it -p 1080:80 web-client",
+    "mock": "node ./mock/index.js"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "dependencies": {
+    "@mithril-icons/font-awesome": "^1.2.0",
+    "@types/mithril": "^2.0.10",
+    "luxon": "^2.4.0",
+    "mithril": "^2.0.4"
+  },
+  "resolutions": {
+    "jest-environment-jsdom": "28.1.0"
+  },
+  "proxy": "http://localhost:9000/api"
+}
