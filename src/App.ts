@@ -14,7 +14,7 @@ const loadSelected = async (select: string, node: Object) => {
 
 const App = {
   oninit: async (vnode) => {
-    vnode.state.selected = 'contacts';
+    vnode.state.selected = 'skills';
     await loadSelected(vnode.state.selected, vnode.state);
     vnode.state.loaded = 'true';
     m.redraw();
