@@ -4,6 +4,7 @@ import Loading from './components/Loading';
 import Navigator from './components/Navigator';
 import SkillsCard from './components/SkillsCard';
 import ExperiencesCard from './components/ExperiencesCard';
+import ContactsCard from './components/ContactsCard';
 
 const loadSelected = async (select: string, node: Object) => {
   node[select] = await (
@@ -13,14 +14,14 @@ const loadSelected = async (select: string, node: Object) => {
 
 const App = {
   oninit: async (vnode) => {
-    vnode.state.selected = 'skills';
+    vnode.state.selected = 'contacts';
     await loadSelected(vnode.state.selected, vnode.state);
     vnode.state.loaded = 'true';
     m.redraw();
   },
 
   view: (vnode) => {
-    const { loaded, skills, experiences } = vnode.state;
+    const { loaded, skills, experiences, contacts } = vnode.state;
     let { selected } = vnode.state;
     const setSelected = async (select) => {
       await loadSelected(select, vnode.state);
@@ -40,7 +41,7 @@ const App = {
           ? m(SkillsCard({ skills }))
           : selected == 'experiences'
           ? m(ExperiencesCard({ experiences }))
-          : 'Contact Info'
+          : m(ContactsCard({ contacts }))
         : m(Loading),
     ]);
   },
