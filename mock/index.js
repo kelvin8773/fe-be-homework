@@ -6,7 +6,7 @@ const port = 9000;
 const app = express();
 
 app.use(cors());
-app.use('/api', apiMocker('mock'));
+app.use('/api', apiMocker('./api'));
 
 console.info(`Mock API Server is up and running at : http://localhost:${port}`);
 app.listen(port);

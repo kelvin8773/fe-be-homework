@@ -12,9 +12,7 @@
     "@playwright/test": "^1.22.0",
     "@types/jest": "^27.5.1",
     "@types/mocha": "^9.1.1",
-    "connect-api-mocker": "^1.10.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.3",
+    "concurrently": "^7.2.1",
     "jest": "^28.1.0",
     "jsdom": "^19.0.0",
     "mithril-jest": "^1.0.3",
@@ -25,14 +23,16 @@
     "typescript": "^4.6.4"
   },
   "scripts": {
-    "start": "parcel src/index.html -p 3000 --no-cache",
+    "start": "concurrently --kill-others \"yarn start:mock\" \"yarn start:dev\"",
+    "start:mock": "cd mock && yarn start",
+    "start:dev": "parcel src/index.html -p 3000 --no-cache",
+    "start:docker": "parcel src/index.html -p 3000 --no-cache",
     "build": "parcel build",
     "test": "jest ./src",
     "test:watch": "jest ./src --watch",
     "e2e": "playwright test",
     "docker:build": "docker build -t web-client .",
-    "docker:run": "docker run --rm -it -p 1080:80 web-client",
-    "mock": "node ./mock/index.js"
+    "docker:run": "docker run --rm -it -p 1080:80 web-client"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "dependencies": {
@@ -43,6 +43,5 @@
   },
   "resolutions": {
     "jest-environment-jsdom": "28.1.0"
-  },
-  "proxy": "http://localhost:9000/api"
+  }
 }
